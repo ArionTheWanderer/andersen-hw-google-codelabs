@@ -24,17 +24,18 @@ class MainActivity : AppCompatActivity() {
     fun countUp(view: android.view.View) {
         mCount++
         if (mCount % 2 == 0) {
-            view.backgroundTintList = AppCompatResources.getColorStateList(this, R.color.color_even);
+            view.backgroundTintList = AppCompatResources.getColorStateList(this, R.color.color_even)
         } else {
-            view.backgroundTintList = AppCompatResources.getColorStateList(this, R.color.color_odd);
+            view.backgroundTintList = AppCompatResources.getColorStateList(this, R.color.color_odd)
         }
-        findViewById<Button>(R.id.button_zero).backgroundTintList = AppCompatResources.getColorStateList(this, R.color.color_even)
+        findViewById<Button>(R.id.button_zero).backgroundTintList = AppCompatResources.getColorStateList(this, R.color.color_zero_active)
         mShowCount.text = mCount.toString()
     }
 
     fun resetCount(view: android.view.View) {
         mCount = 0
-        view.backgroundTintList = AppCompatResources.getColorStateList(this, R.color.color_gray)
+        findViewById<Button>(R.id.button_count).backgroundTintList = AppCompatResources.getColorStateList(this, R.color.color_even)
+        view.backgroundTintList = AppCompatResources.getColorStateList(this, R.color.color_zero_inactive)
         mShowCount.text = mCount.toString()
     }
 }

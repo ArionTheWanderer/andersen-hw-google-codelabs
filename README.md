@@ -1,8 +1,8 @@
-# Домашние задания по 2 первым урокам Google Codelabs
+# Домашние задания по Google Codelabs
 
 Директории с окончанием Challenge - задания по Coding Challenge в соответствующих уроках
 
-Lesson 1.
+# Lesson 1.
 1.1: Android Studio and Hello World
 Раздел Coding Challenge - HelloWorldChallenge. Один экран с надписью "Happy birthday to me!" Логируется произвольное сообщение и выкинутая вручную ошибка.
 

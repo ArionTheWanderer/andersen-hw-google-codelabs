@@ -17,7 +17,23 @@
         android:layout_marginBottom="16dp">
 
         <Button
-            android:id="@+id/button_toast"
+            android:id="@+id/button_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="sayHello"
+            android:text="@string/button_label_hello"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:flow_horizontalBias="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/button_toast"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <Button
+            android:id="@id/button_toast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/purple_500"
@@ -29,8 +45,7 @@
             app:layout_constraintBottom_toTopOf="@+id/button_zero"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="spread_inside" />
+            app:layout_constraintTop_toBottomOf="@id/button_hello" />
 
         <Button
             android:id="@id/button_zero"

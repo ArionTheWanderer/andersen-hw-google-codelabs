@@ -1,5 +1,6 @@
 package com.example.helloconstraint
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -40,5 +41,16 @@ class MainActivity : AppCompatActivity() {
         mCount = 0
         findViewById<Button>(R.id.button_count).backgroundTintList = AppCompatResources.getColorStateList(this, R.color.color_even)
         view.backgroundTintList = AppCompatResources.getColorStateList(this, R.color.color_zero_inactive)
+    }
+
+    fun sayHello(view: android.view.View) {
+        val intent = Intent(this, SecondActivity::class.java)
+        intent.putExtra(EXTRA_COUNT, mCount)
+        startActivity(intent)
+    }
+
+    companion object {
+        @JvmStatic
+        val EXTRA_COUNT = "com.example.helloconstraint.extra.COUNT"
     }
 }

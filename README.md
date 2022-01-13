@@ -2,7 +2,7 @@
 
 Директории с окончанием Challenge - задания по Coding Challenge в соответствующих уроках
 
-# Lesson 1.
+# Lesson 1
 1.1: Android Studio and Hello World  
 Раздел Coding Challenge - HelloWorldChallenge. Один экран с надписью "Happy birthday to me!" Логируется произвольное сообщение и выкинутая вручную ошибка.  
 
@@ -19,3 +19,8 @@
 
 1.4: Learn to help yourself  
 Раздел Homework - HelloToast и BasicTransitionProjectSample. Новые значки лаунчеров. BasicTransitionProjectSample - sample, скачанный с гитхаба из Android Studio (File -> New -> Import Sample).  
+
+# Lesson 2
+2.1: Activities and intents  
+Раздел Coding Challenge - TwoActivitiesChallenge. На первом экране 3 кнопки. Каждая из них запускает SecondActivity и кладет в intent код соответствующий своему порядковому номер (1, 2, 3). На втором экране есть заголовок textView и ScrollView, содержащий статью textView. Activity устанавливает в них значения соответствующие пришедшему коду (например: заголовок статьи 1 и статья 1).  
+Раздел Homework - HelloToast. Вместо замены кнопки toast на say hello я просто добавил кнопку say hello, чтобы не разрушать функциональность одной из предыдущих домашних работ. По нажатию кнопки say hello создается intent, куда записывается текущее значение счетчика и открывается SecondActivity. SecondActivity выводит надпись Hello! и устанавливает значение счетчика из интента в textView, следующий за textView Hello!.  

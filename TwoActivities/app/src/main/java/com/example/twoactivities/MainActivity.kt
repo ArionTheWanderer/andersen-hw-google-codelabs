@@ -1,12 +1,10 @@
 package com.example.twoactivities
 
-import android.R.attr
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.content.Intent
 import android.widget.EditText
-import android.R.attr.data
 import android.view.View
 import android.widget.TextView
 
@@ -19,11 +17,58 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d(LOG_TAG, "-------")
+        Log.d(LOG_TAG, "onCreate")
         setContentView(R.layout.activity_main)
         mMessageEditText = findViewById(R.id.editText_main)
         mReplyHeadTextView = findViewById(R.id.text_header_reply)
         mReplyTextView = findViewById(R.id.text_message_reply)
+        if (savedInstanceState != null) {
+            val isVisible = savedInstanceState.getBoolean("reply_visible")
+            if (isVisible) {
+                mReplyHeadTextView.visibility = View.VISIBLE
+                mReplyTextView.text = savedInstanceState.getString("reply_text")
+                mReplyTextView.visibility = View.VISIBLE
+            }
+        }
+    }
 
+    override fun onStart() {
+        super.onStart()
+        Log.d(LOG_TAG, "onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(LOG_TAG, "onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d(LOG_TAG, "onPause")
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        if (mReplyHeadTextView.visibility == View.VISIBLE) {
+            outState.putBoolean("reply_visible", true)
+            outState.putString("reply_text",mReplyTextView.text.toString())
+        }
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(LOG_TAG, "onRestart")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(LOG_TAG, "onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(LOG_TAG, "onDestroy")
     }
 
     fun launchSecondActivity(view: android.view.View) {

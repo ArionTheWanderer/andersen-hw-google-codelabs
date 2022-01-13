@@ -16,3 +16,6 @@
 Здесь Coding Challenge и Homework выполнены в одной директории, т.к. не перекрывают друг друга.  
 Раздел Coding Challenge - ScrollingText. Добавил кнопку в LinearLayout внутри ScrollView, чтобы она прокручивалась вместе с текстом.  
 Раздел Homework - ScrollingText. Изменил подзаголовок так, чтобы он был включен в столбец слева шириной 100dp. Текст статьи поместил справа от подзаголовка. Кнопка на месте.  
+
+1.4: Learn to help yourself  
+Раздел Homework - HelloToast и BasicTransitionProjectSample. Новые значки лаунчеров. BasicTransitionProjectSample - sample, скачанный с гитхаба из Android Studio (File -> New -> Import Sample).  

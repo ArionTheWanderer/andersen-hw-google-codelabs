@@ -11,7 +11,8 @@
         android:id="@+id/website_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/edittext_uri" />
+        android:text="@string/edittext_uri"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/open_website_button"
@@ -24,7 +25,8 @@
         android:id="@+id/location_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/edittext_loc" />
+        android:text="@string/edittext_loc"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/open_location_button"
@@ -37,7 +39,8 @@
         android:id="@+id/share_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/edittext_share" />
+        android:text="@string/edittext_share"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/share_text_button"
@@ -45,5 +48,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="@string/button_share" />
+
+    <Button
+        android:id="@+id/take_picture_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_photo" />
 
 </LinearLayout>

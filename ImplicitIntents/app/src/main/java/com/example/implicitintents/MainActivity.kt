@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.content.Intent
+import android.provider.MediaStore
 import android.util.Log
 import android.widget.Button
 import androidx.core.app.ShareCompat
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             if (intent.resolveActivity(packageManager) != null) {
                 startActivity(intent)
             } else {
-                Log.d("ImplicitIntents", "Can't handle this!")
+                Log.d("ImplicitIntents", "Can't handle this intent!")
             }
         }
 
@@ -53,6 +54,15 @@ class MainActivity : AppCompatActivity() {
                 .setChooserTitle(getString(R.string.share_text_with))
                 .setText(txt)
                 .startChooser()
+        }
+
+        findViewById<Button>(R.id.take_picture_button).setOnClickListener {
+            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivity(intent);
+            } else {
+                Log.d("ImplicitIntents", "Can't handle this intent!");
+            }
         }
     }
 }
